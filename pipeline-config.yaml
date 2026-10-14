@@ -5,4 +5,4 @@ resources:
   cpu: "0.7"
   memory: "100Mi"
 buildCmd: "echo 'No compilation needed for Python!'"
-testCmd: "python3 -m pip install --target=/usr/local/lib/python3.11/site-packages pytest flask && python3 -m pytest -v"
+testCmd: "python3 -m pip install --target=\$(python3 -c 'import sys; print([p for p in sys.path if \"site-packages\" in p][0])') pytest flask && python3 -m pytest -v"
