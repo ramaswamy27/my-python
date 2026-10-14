@@ -7,4 +7,5 @@ resources:
 buildCmd: "echo 'No compilation needed for Python!'"
 testCmd: |
   python3 -m pip install --user -r requirements.txt
+  chmod +x /root/.local/bin/pytest
   /root/.local/bin/pytest -v
