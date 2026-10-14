@@ -1,5 +1,5 @@
 stack: "python"
-stackVersion: "3"
+stackVersion: "3.11-slim"
 imageName: "my-lightweight-python-app"
 resources:
   cpu: "0.7"
