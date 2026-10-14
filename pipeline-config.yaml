@@ -1,0 +1,8 @@
+stack: "python"
+stackVersion: "3"
+imageName: "my-lightweight-python-app"
+resources:
+  cpu: "0.7"
+  memory: "100Mi"
+buildCmd: "echo 'No compilation needed for Python!'"
+testCmd: "pip install -r requirements.txt && pytest"
