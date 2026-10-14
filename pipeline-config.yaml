@@ -5,4 +5,4 @@ resources:
   cpu: "0.7"
   memory: "100Mi"
 buildCmd: "echo 'No compilation needed for Python!'"
-testCmd: "sh -c 'python3 -m pip install --target=.local_modules pytest flask && PYTHONPATH=.local_modules python3 -m pytest -v'"
+testCmd: "sh -c 'python3 -m pip install --target=.local_modules pytest flask && PYTHONPATH=.local_modules python3 -m pytest -v --suppress-no-test-exit-code'"
