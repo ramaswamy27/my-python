@@ -6,6 +6,5 @@ resources:
   memory: "100Mi"
 buildCmd: "echo 'No compilation needed for Python!'"
 testCmd: |
-  python3 -m pip install --user -r requirements.txt
-  chmod -R 777 /root/.local
-  /root/.local/bin/pytest -v
+  python3 -m pip install --break-system-packages -r requirements.txt
+  python3 -m pytest -v
