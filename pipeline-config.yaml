@@ -5,8 +5,4 @@ resources:
   cpu: "0.7"
   memory: "100Mi"
 buildCmd: "echo 'No compilation needed for Python!'"
-testCmd: |
-  export PYTHONPATH=$(python3 -c "import sys; print(':'.join(sys.path))")
-  python3 -m pip install --target=.local_modules pytest flask
-  export PYTHONPATH=$(pwd)/.local_modules:$PYTHONPATH
-  python3 -m pytest -v
+testCmd: "sh -c 'python3 -m pip install --target=.local_modules pytest flask && PYTHONPATH=.local_modules python3 -m pytest -v'"
