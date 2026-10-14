@@ -5,4 +5,6 @@ resources:
   cpu: "0.7"
   memory: "100Mi"
 buildCmd: "echo 'No compilation needed for Python!'"
-testCmd: "python3 -m pip install -r requirements.txt && python3 -m pytest"
+testCmd: |
+  python3 -m pip install -r requirements.txt
+  python3 -m pytest -v
